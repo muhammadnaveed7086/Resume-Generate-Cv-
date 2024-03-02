@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV Form</title>
+    <link rel="stylesheet" href="cv.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Cv Form</h1>
+        <hr>
+        <hr>
+        <div class="row">
+
+            <div class="col-md-6">
+                <h3 class="text-center my-2">Personal Info</h3>
+                <hr>
+                <div class="form-group">
+                    <!-- Name -->
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" class="form-control my-2">
+                    <!-- Contact -->
+                    <label for="contactField">Your Contact</label>
+                    <input type="text" id="contactField" class="form-control my-2">
+                    <!-- Email -->
+                    <label for="emailField">Your Email</label>
+                    <input type="email" id="emailField" class="form-control my-2">
+                    <!-- Adress -->
+                    <label for="adressField">Your Adress</label>
+                    <input type="text" id="adressField" class="form-control my-2">
+                    <!-- Facebook -->
+                    <label for="fbField">Facebook Link</label>
+                    <input type="text" id="fbField" class="form-control my-2">
+                    <!-- Instagram -->
+                    <label for="instaField">Instagram Link </label>
+                    <input type="text" id="instaField" class="form-control my-2">
+                    <!-- LinkedIn -->
+                    <label for="linkedinField">LinkedIn Link</label>
+                    <input type="text" id="linkedinField" class="form-control my-2">
+                    <!-- Website -->
+                    <label for="webField">Website Link</label>
+                    <input type="text" id="webField" class="form-control my-2">
+                    <!-- image -->
+                    <label for="imageField" class="mt-5 text-center " style="font-size: 18px; font-weight: bold;">Select
+                        Image</label>
+                    <input type="file" id="imageField">
+                </div>
+            </div>
+
+
+            <!-- Professional Information -->
+            <div class="col-md-6">
+                <h3 class="text-center my-2">Professional Info</h3>
+                <hr>
+
+                <div class="form-group">
+                    <label for="">About Me</label>
+                    <textarea class="form-control my-2" rows="3" id="aboutme"></textarea>
+                </div>
+
+                <div class="form-group "id="edu" >
+                    <label for="">Your Eductaion</label>
+                    <textarea placeholder="Enter here" class="form-control my-2 eduField">
+                    </textarea>
+                    <div class="text-center my-2" id="eduAddButton">
+                        <button class="btn btn-primary btn-sm text-center" onclick="AddneweduField()">Add</button>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="form-group " id="we">
+                    <label for="eduField">Work Experience</label>
+                    <textarea class="form-control weField" placeholder="Enter here">
+                        </textarea>
+                    <div class="text-center my-2">
+                        <button class="btn btn-primary btn-sm text-center" onclick="AddnewweField()">Add</button>
+                    </div>
+                </div>
+
+                <!-- SKILLS -->
+                <div class="form-group " id="skill">
+                    <label for="skillField">Skills</label>
+                    <textarea class="form-control  skillField" placeholder="Enter here">
+                        </textarea>
+                    <div class="text-center my-2" id="addskillButton">
+                        <button class="btn btn-primary btn-sm text-center" onclick="AddnewskillField()">Add</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div id="GenerateCvButton" class="text-center my-3" style='font-size:18px;'>
+        <button class="btn btn-sm btn-primary " onclick="GenerateCv()">
+            Generate CV
+        </button>
+    </div>
+    <hr>
+
+
+    <!-- Template  of cv start here-->
+    <div id="templatecontainer" class="container-fluid">
+        <div class="row">
+            <!-- Personal info -->
+            <div class="col-md-4" style="background-color: brown; color: white;">
+                <div class="text-center">
+                    <!-- image -->
+                    <img src="naveed.jpg" width="58%" height="42%" style="border-radius: 50%" class="text-center m-4">
+                    <!-- Name -->
+                    <p class="text-center parastyle " id="nameT1">Muhammad Naveed</p>
+                    <!-- Contact -->
+                    <p class="textcenter parastyle" id="contactT">
+                        +923088221257,92311062109
+                    </p>
+                    <!-- Email -->
+                    <p class="text-center parastyle" id="emailT">
+                        naveedmusl@gmail.com
+                    </p>
+                    <!-- Adress -->
+                    <p class="text-center parastyle" id="adressT">
+                        28 Rasheed Street Mansora Bazzar,Lahore Pakistan
+                    </p>
+                    <!-- Facebook -->
+                    <p class="text-center parastyle" id="fbT">
+                        @muhammadnaveed
+                    </p>
+                    <!-- Instagram -->
+                    <p class="text-center parastyle" id="instaT">
+                        @naveedashraf
+                    </p>
+                    <!-- Linkedin -->
+                    <p class="text-center parastyle" id="linkedinT">
+                        @naveedrajpoot
+                    </p>
+                    <!-- website -->
+                    <p class="text-center parastyle" id="webT">
+                        www.muhammadnaveed.com
+                    </p>
+
+                </div>
+            </div>
+
+
+
+            <!-- Professional Info -->
+            <div class="col-md-8">
+                <h1 class="text-center mb-4" id="nameT2">Muhammad Naveed</h1>
+                <hr>
+                <div class="card mt-5">
+
+                    <div style='background-color:rgb(81, 193, 184);'>
+                        <h4 class="text-center">About me</h4>
+                    </div>
+                    <div class="card-body " style="font-size:18px;">
+                        <p id="aboutmeT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non autem repellat odit quia. Hic
+                            itaque, est voluptatibus nemo soluta consectetur dolore eos repellat, blanditiis, ipsum
+                            consequuntur!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mt-5">
+
+                    <div style='background-color:rgb(81, 193, 184);'>
+                        <h4 class="text-center">Education</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eduT" style="font-size:18px;">
+                            <li>dfjhgjv</li>
+                            <li>ljdifu</li>
+                            <li>;sfguycv </li>
+                            <li>midopas</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="card mt-5">
+
+                    <div style='background-color:rgb(81, 193, 184);'>
+                        <h4 class="text-center">Work Experience</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT" style="font-size:18px;">
+                            <li>dfjhgjv</li>
+                            <li>ljdifu</li>
+                            <li>;sfguycv </li>
+                            <li>midopas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-5">
+
+                    <div style='background-color:rgb(81, 193, 184);'>
+                        <h4 class="text-center">Skills</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skillT" style="font-size:18px;">
+                            <li>djhjdfjfdg</li>
+                            <li>rrrrrrrrrrrrr</li>
+                            <li>fffffffffffffdf</li>
+                            <li>dddddddddddddf</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="AddPrintButtoni" class="text-center">
+            <button class="btn btn-sm btn-primary mt-4" onclick="AddPrintButton()">Print CV</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="cv.js"></script>
+</body>
+
+</html>

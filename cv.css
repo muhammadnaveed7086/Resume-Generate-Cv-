@@ -1,0 +1,21 @@
+#imageField{
+     padding: 2px;
+    border: 2px solid rgb(109, 54, 54);
+    background-color: rgb(110, 43, 43);
+    color: white;
+    border-radius: 24px;
+}
+#imageField:hover{
+    cursor: pointer;
+}
+
+
+/* Template for CV style start here */
+.parastyle{
+    font-size:1.2rem;
+    /* font-weight: bold; */
+    margin-top: 1.5rem;
+}
+#templatecontainer{
+    display: none;
+}
